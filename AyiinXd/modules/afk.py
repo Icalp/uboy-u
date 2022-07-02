@@ -19,7 +19,7 @@ last_afk_msg = {}
 afk_start = {}
 
 
-@ayiin_handler(outgoing=True)
+@icalp_handler(outgoing=True)
 async def set_not_afk(event):
     global USER_AFK
     global afk_time
@@ -63,7 +63,7 @@ async def set_not_afk(event):
         await bash("rm -rf *.tgs")
 
 
-@ayiin_handler(incoming=True, func=lambda e: bool(e.mentioned or e.is_private))
+@icalp_handler(incoming=True, func=lambda e: bool(e.mentioned or e.is_private))
 async def on_afk(event):
     if event.fwd_from:
         return
@@ -114,7 +114,7 @@ async def on_afk(event):
             pass
 
 
-@ayiin_cmd(pattern="afk(?: |$)(.*)")
+@icalp_cmd(pattern="afk(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
