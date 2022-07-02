@@ -8,7 +8,7 @@ from AyiinXd import CMD_HELP
 from AyiinXd.ayiin import edit_or_reply, ayiin_cmd
 
 
-@ayiin_cmd(pattern="sadboy(?: |$)(.*)")
+@icalp_cmd(pattern="sadboy(?: |$)(.*)")
 async def _(event):
     xx = await edit_or_reply(event, "`Pertama-tama kamu cantik`")
     sleep(2)
@@ -17,7 +17,7 @@ async def _(event):
     await xx.edit("`Dan yang terakhir adalah kamu bukan jodohku`")
 
 
-@ayiin_cmd(pattern="punten(?: |$)(.*)")
+@icalp_cmd(pattern="punten(?: |$)(.*)")
 async def _(event):
     await edit_or_reply(
         event,
@@ -32,7 +32,7 @@ async def _(event):
     )
 
 
-@ayiin_cmd(pattern="pantau(?: |$)(.*)")
+@icalp_cmd(pattern="pantau(?: |$)(.*)")
 async def _(event):
     await edit_or_reply(
         event,
@@ -47,7 +47,7 @@ async def _(event):
     )
 
 
-@ayiin_cmd(pattern="frog(?: |$)(.*)")
+@icalp_cmd(pattern="frog(?: |$)(.*)")
 async def _(event):
     await edit_or_reply(
         event,
@@ -69,7 +69,7 @@ async def _(event):
     )
 
 
-@ayiin_cmd(pattern="dfrog(?: |$)(.*)")
+@icalp_cmd(pattern="dfrog(?: |$)(.*)")
 async def _(event):
     await edit_or_reply(
         event,
@@ -91,7 +91,7 @@ async def _(event):
     )
 
 
-@ayiin_cmd(pattern="strump(?: |$)(.*)")
+@icalp_cmd(pattern="strump(?: |$)(.*)")
 async def _(event):
     await edit_or_reply(
         event,
@@ -113,7 +113,7 @@ async def _(event):
     )
 
 
-@ayiin_cmd(pattern="scina(?: |$)(.*)")
+@icalp_cmd(pattern="scina(?: |$)(.*)")
 async def _(event):
     await edit_or_reply(
         event,
@@ -136,7 +136,7 @@ async def _(event):
     )
 
 
-@ayiin_cmd(pattern="wlcm(?: |$)(.*)")
+@icalp_cmd(pattern="wlcm(?: |$)(.*)")
 async def _(event):
     await edit_or_reply(
         event,
@@ -153,7 +153,7 @@ async def _(event):
     )
 
 
-@ayiin_cmd(pattern="gta(?: |$)(.*)")
+@icalp_cmd(pattern="gta(?: |$)(.*)")
 async def _(event):
     await edit_or_reply(
         event,
@@ -171,7 +171,7 @@ async def _(event):
     )
 
 
-@ayiin_cmd(pattern="sthink(?: |$)(.*)")
+@icalp_cmd(pattern="sthink(?: |$)(.*)")
 async def _(event):
     await edit_or_reply(
         event,
