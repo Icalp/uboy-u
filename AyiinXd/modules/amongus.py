@@ -18,7 +18,7 @@ from AyiinXd import CMD_HELP
 from AyiinXd.ayiin import ayiin_cmd
 
 
-@ayiin_cmd(pattern="imp (.*)")
+@icalp_cmd(pattern="imp (.*)")
 async def f_load(message):
     clrs = {
         "red": 1,
