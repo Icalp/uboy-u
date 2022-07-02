@@ -24,7 +24,7 @@ def aesthetify(string):
         yield chr(c)
 
 
-@ayiin_cmd(pattern="ae(?: |$)(.*)")
+@icalp_cmd(pattern="ae(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
