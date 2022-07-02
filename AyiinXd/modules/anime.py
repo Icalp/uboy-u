@@ -248,7 +248,7 @@ async def formatJSON(outData):
     return msg
 
 
-@ayiin_cmd(pattern="anilist ?(.*)")
+@icalp_cmd(pattern="anilist ?(.*)")
 async def anilist(event):
     if event.fwd_from:
         return
@@ -258,7 +258,7 @@ async def anilist(event):
     await edit_or_reply(event, msg, link_preview=True)
 
 
-@ayiin_cmd(pattern="anime ?(.*)")
+@icalp_cmd(pattern="anime ?(.*)")
 async def search_anime(message):
     search_query = message.pattern_match.group(1)
     await message.get_reply_message()
@@ -280,7 +280,7 @@ async def search_anime(message):
         )
 
 
-@ayiin_cmd(pattern=r"manga ?(.*)")
+@icalp_cmd(pattern=r"manga ?(.*)")
 async def search_manga(message):
     search_query = message.pattern_match.group(1)
     await message.get_reply_message()
@@ -296,7 +296,7 @@ async def search_manga(message):
     )
 
 
-@ayiin_cmd(pattern="a(kaizoku|kayo) ?(.*)")
+@icalp_cmd(pattern="a(kaizoku|kayo) ?(.*)")
 async def site_search(event):
     message = await event.get_reply_message()
     search_query = event.pattern_match.group(2)
@@ -343,7 +343,7 @@ async def site_search(event):
             await edit_or_reply(event, result, parse_mode="HTML")
 
 
-@ayiin_cmd(pattern="char ?(.*)")
+@icalp_cmd(pattern="char ?(.*)")
 async def character(event):
     message = await event.get_reply_message()
     search_query = event.pattern_match.group(1)
@@ -390,7 +390,7 @@ async def character(event):
     )
 
 
-@ayiin_cmd(pattern="upcoming$")
+@icalp_cmd(pattern="upcoming$")
 async def upcoming(message):
     rep = "<b>Upcoming anime</b>\n"
     later = jikan.season_later()
@@ -404,7 +404,7 @@ async def upcoming(message):
         await edit_or_reply(message, rep, parse_mode="html")
 
 
-@ayiin_cmd(pattern="whatanime$")
+@icalp_cmd(pattern="whatanime$")
 async def whatanime(e):
     media = e.media
     if not media:
