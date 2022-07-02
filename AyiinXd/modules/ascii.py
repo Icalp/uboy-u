@@ -18,7 +18,7 @@ from Stringyins import get_string
 bground = "black"
 
 
-@ayiin_cmd(pattern="(ascii|asciis)$")
+@icalp_cmd(pattern="(ascii|asciis)$")
 async def _(event):
     if not event.reply_to_msg_id:
         return await eod(event, get_string("failed3"))
@@ -118,7 +118,7 @@ async def random_color():
                           for k in range(6)) for i in range(2)]
 
 
-@ayiin_cmd(pattern="asciibg(?: |$)(.*)")
+@icalp_cmd(pattern="asciibg(?: |$)(.*)")
 async def _(event):
     BG = event.pattern_match.group(1)
     if BG.isnumeric():
