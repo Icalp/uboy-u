@@ -9,7 +9,7 @@ from AyiinXd.modules.yinsping import absen
 from AyiinXd.ayiin import edit_or_reply, ayiin_cmd
 
 
-@ayiin_cmd(pattern="bulan$")
+@icalp_cmd(pattern="bulan$")
 async def _(event):
     event = await edit_or_reply(event, "bulan.")
     animation_interval = 0.2
@@ -54,7 +54,7 @@ async def _(event):
         await event.edit(animation_chars[i % 32])
 
 
-@ayiin_cmd(pattern="sayang$")
+@icalp_cmd(pattern="sayang$")
 async def _(event):
     e = await edit_or_reply(event, "I LOVEE YOUUU 💕")
     await e.edit("💝💘💓💗")
@@ -82,7 +82,7 @@ async def _(event):
     await e.edit("SAYANG KAMU💞")
 
 
-@ayiin_cmd(pattern=r"dino(?: |$)(.*)")
+@icalp_cmd(pattern=r"dino(?: |$)(.*)")
 async def _(event):
     typew = await edit_or_reply(event, "`DIN DINNN.....`")
     sleep(1)
@@ -139,7 +139,7 @@ async def _(event):
     await typew.edit("`-TAMAT-`")
 
 
-@ayiin_cmd(pattern="gabut$")
+@icalp_cmd(pattern="gabut$")
 async def _(event):
     e = await edit_or_reply(event, "`PERNAAHHHHH KAHHH KAUUU MENGIRA`")
     await e.edit("`SEPEEERTIIIII APAAAA BENTUKKKKKKK CINTAAAA`")
@@ -395,7 +395,7 @@ async def _(event):
     await e.edit("`GABUT`")
 
 
-@ayiin_cmd(pattern=r"terkadang(?: |$)(.*)")
+@icalp_cmd(pattern=r"terkadang(?: |$)(.*)")
 async def _(event):
     typew = await edit_or_reply(event, "`Terkadang`")
     sleep(1)
@@ -413,12 +413,12 @@ async def _(event):
 # Create by myself @localheart
 
 
-@ayiin_cmd(pattern=r"mf$")
+@icalp_cmd(pattern=r"mf$")
 async def _(event):
     await edit_or_reply(event, "`mf g dl` **ミ(ノ;_ _)ノ=3** ")
 
 
-@ayiin_cmd(pattern=r"(.*)")
+@icalp_cmd(pattern=r"(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -445,7 +445,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@ayiin_cmd(pattern=r"gombal(?: |$)(.*)")
+@icalp_cmd(pattern=r"gombal(?: |$)(.*)")
 async def _(event):
     typew = edit_or_reply(event, "`Hai, I LOVE YOU 💞`")
     sleep(1)
@@ -471,7 +471,7 @@ async def _(event):
 # Create by myself @localheart
 
 
-@ayiin_cmd(pattern="helikopter(?: |$)(.*)")
+@icalp_cmd(pattern="helikopter(?: |$)(.*)")
 async def _(event):
     await edit_or_reply(
         event,
@@ -494,7 +494,7 @@ async def _(event):
     )
 
 
-@ayiin_cmd(pattern="tembak(?: |$)(.*)")
+@icalp_cmd(pattern="tembak(?: |$)(.*)")
 async def _(event):
     await edit_or_reply(
         event,
@@ -502,7 +502,7 @@ async def _(event):
     )
 
 
-@ayiin_cmd(pattern="bundir(?: |$)(.*)")
+@icalp_cmd(pattern="bundir(?: |$)(.*)")
 async def _(event):
     await edit_or_reply(
         event,
@@ -523,7 +523,7 @@ async def _(event):
     )
 
 
-@ayiin_cmd(pattern="awk(?: |$)(.*)")
+@icalp_cmd(pattern="awk(?: |$)(.*)")
 async def _(event):
     await edit_or_reply(
         event,
@@ -535,7 +535,7 @@ async def _(event):
     )
 
 
-@ayiin_cmd(pattern="ular(?: |$)(.*)")
+@icalp_cmd(pattern="ular(?: |$)(.*)")
 async def _(event):
     await edit_or_reply(
         event,
@@ -627,7 +627,7 @@ async def _(event):
     )
 
 
-@ayiin_cmd(pattern="y(?: |$)(.*)")
+@icalp_cmd(pattern="y(?: |$)(.*)")
 async def _(event):
     await edit_or_reply(
         event,
@@ -647,7 +647,7 @@ async def _(event):
     )
 
 
-@ayiin_cmd(pattern="tank(?: |$)(.*)")
+@icalp_cmd(pattern="tank(?: |$)(.*)")
 async def _(event):
     await edit_or_reply(
         event,
@@ -658,7 +658,7 @@ async def _(event):
     )
 
 
-@ayiin_cmd(pattern="babi(?: |$)(.*)")
+@icalp_cmd(pattern="babi(?: |$)(.*)")
 async def _(event):
     await edit_or_reply(
         event,
@@ -678,7 +678,7 @@ async def _(event):
     await event.reply(choice(absen))
 
 
-@ayiin_cmd(pattern="ajg(?: |$)(.*)")
+@icalp_cmd(pattern="ajg(?: |$)(.*)")
 async def _(event):
     await edit_or_reply(
         event,
@@ -691,7 +691,7 @@ async def _(event):
     )
 
 
-@ayiin_cmd(pattern=r"bernyanyi(?: |$)(.*)")
+@icalp_cmd(pattern=r"bernyanyi(?: |$)(.*)")
 async def _(event):
     typew = await edit_or_reply(event, "**Ganteng Doang Gak Bernyanyi (ง˙o˙)ว**")
     sleep(2)
@@ -726,7 +726,7 @@ async def _(event):
     await typew.edit("**♪┗ ( ･o･) ┓♪┏ (・o･) ┛♪**")
 
 
-@ayiin_cmd(pattern="santet(?: |$)(.*)")
+@icalp_cmd(pattern="santet(?: |$)(.*)")
 async def _(event):
     typew = await edit_or_reply(event, "`Mengaktifkan Perintah Santet Online....`")
     sleep(2)
