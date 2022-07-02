@@ -94,7 +94,7 @@ thumb_image_path = TEMP_DOWNLOAD_DIRECTORY + "/thumb_image.jpg"
 name = "Profile Photos"
 
 
-@ayiin_cmd(pattern="app(?: |$)(.*)")
+@icalp_cmd(pattern="app(?: |$)(.*)")
 async def apk(e):
     xx = await eor(e, get_string("com_1"))
     try:
@@ -164,7 +164,7 @@ async def apk(e):
         await eod(xx, "Exception Occured:- " + str(err))
 
 
-@ayiin_cmd(pattern="calc(?: |$)(.*)")
+@icalp_cmd(pattern="calc(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -201,7 +201,7 @@ async def _(event):
         await xx.edit(f"**Ketik** `{cmd}help calc` **bila butuh bantuan**")
 
 
-@ayiin_cmd(pattern="xcd(?: |$)(.*)")
+@icalp_cmd(pattern="xcd(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -249,7 +249,7 @@ Year: {}""".format(
         await eor(xx, "xkcd n.{} not found!".format(xkcd_id))
 
 
-@ayiin_cmd(pattern="remove(?: |$)(.*)", allow_sudo=False)
+@icalp_cmd(pattern="remove(?: |$)(.*)", allow_sudo=False)
 async def _(event):
     if event.fwd_from:
         return
@@ -401,7 +401,7 @@ async def ban_user(chat_id, i, rights):
         return False, str(exc)
 
 
-@ayiin_cmd(pattern="rnupload(?: |$)(.*)")
+@icalp_cmd(pattern="rnupload(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -444,7 +444,7 @@ async def _(event):
         await eod(xx, "Syntax // .rnupload filename.extension <reply ke media>")
 
 
-@ayiin_cmd(pattern="grab(?: |$)(.*)")
+@icalp_cmd(pattern="grab(?: |$)(.*)")
 async def potocmd(event):
     id = "".join(event.raw_text.split(maxsplit=2)[1:])
     user = await event.get_reply_message()
@@ -476,7 +476,7 @@ async def potocmd(event):
             return await eod(xx, get_string("failed2"))
 
 
-@ayiin_cmd(pattern="res(?: |$)(.*)")
+@icalp_cmd(pattern="res(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -573,7 +573,7 @@ def get_provider(url):
     return url
 
 
-@ayiin_cmd(pattern="watch(?: |$)(.*)")
+@icalp_cmd(pattern="watch(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -623,7 +623,7 @@ async def _(event):
 # Modified by :- @kirito6969,@deleteduser420
 
 
-@ayiin_cmd(pattern="weeb(?: |$)(.*)")
+@icalp_cmd(pattern="weeb(?: |$)(.*)")
 async def weebify(event):
     args = event.pattern_match.group(1)
     if not args:
@@ -670,7 +670,7 @@ boldfont = [
 ]
 
 
-@ayiin_cmd(pattern="bold(?: |$)(.*)")
+@icalp_cmd(pattern="bold(?: |$)(.*)")
 async def thicc(bolded):
     args = bolded.pattern_match.group(1)
     if not args:
@@ -717,7 +717,7 @@ medievalbold = [
 ]
 
 
-@ayiin_cmd(pattern="medibold(?: |$)(.*)")
+@icalp_cmd(pattern="medibold(?: |$)(.*)")
 async def mediv(medievalx):
     args = medievalx.pattern_match.group(1)
     if not args:
@@ -766,7 +766,7 @@ doublestruckt = [
 ]
 
 
-@ayiin_cmd(pattern="doublestruck(?: |$)(.*)")
+@icalp_cmd(pattern="doublestruck(?: |$)(.*)")
 async def doublex(doublestrucktx):
     args = doublestrucktx.pattern_match.group(1)
     if not args:
@@ -815,7 +815,7 @@ cursiveboldx = [
 ]
 
 
-@ayiin_cmd(pattern="curbold(?: |$)(.*)")
+@icalp_cmd(pattern="curbold(?: |$)(.*)")
 async def cursive2(cursivebolded):
     args = cursivebolded.pattern_match.group(1)
     if not args:
@@ -866,7 +866,7 @@ medival2 = [
 ]
 
 
-@ayiin_cmd(pattern="medi(?: |$)(.*)")
+@icalp_cmd(pattern="medi(?: |$)(.*)")
 async def medival22(medivallite):
     args = medivallite.pattern_match.group(1)
     if not args:
@@ -914,7 +914,7 @@ cursive = [
 ]
 
 
-@ayiin_cmd(pattern="cur(?: |$)(.*)")
+@icalp_cmd(pattern="cur(?: |$)(.*)")
 async def xcursive(cursivelite):
     args = cursivelite.pattern_match.group(1)
     if not args:
