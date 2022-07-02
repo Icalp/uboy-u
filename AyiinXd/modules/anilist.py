@@ -199,7 +199,7 @@ async def formatJSON(outData):
 url = "https://graphql.anilist.co"
 
 
-@ayiin_cmd(pattern=r"anichar ?(.*)")
+@icalp_cmd(pattern=r"anichar ?(.*)")
 async def anichar(event):
     search = event.pattern_match.group(1)
     reply_to_id = event.reply_to_msg_id or event.message.id
@@ -228,7 +228,7 @@ async def anichar(event):
         await event.edit("Sorry, No such results")
 
 
-@ayiin_cmd(pattern="airing ?(.*)")
+@icalp_cmd(pattern="airing ?(.*)")
 async def arings(event):
     search = event.pattern_match.group(1)
     variables = {"search": search}
@@ -245,7 +245,7 @@ async def arings(event):
     await event.edit(ms_g)
 
 
-@ayiin_cmd(pattern="animanga ?(.*)")
+@icalp_cmd(pattern="animanga ?(.*)")
 async def animanga(event):
     search = event.pattern_match.group(1)
     reply_to_id = event.reply_to_msg_id or event.message.id
@@ -304,7 +304,7 @@ async def animanga(event):
             await event.edit(ms_g)
 
 
-@ayiin_cmd(pattern="anilist ?(.*)")
+@icalp_cmd(pattern="anilist ?(.*)")
 async def anilist(event):
     input_str = event.pattern_match.group(1)
     event = await event.edit("Searching...")
