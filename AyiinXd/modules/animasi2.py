@@ -8,7 +8,7 @@ from telethon import events
 import asyncio
 
 
-@ayiin_cmd(pattern="hua$")
+@icalp_cmd(pattern="hua$")
 async def koc(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("أ‿أ")
@@ -43,7 +43,7 @@ async def koc(e):
         await e.edit("༼ ༎ຶ ෴ ༎ຶ༽")
 
 
-@ayiin_cmd(pattern="huh(?: |$)(.*)")
+@icalp_cmd(pattern="huh(?: |$)(.*)")
 async def _(event):
     aa = await edit_or_reply(event, "`\n(\\_/)`"
                              "`\n(●_●)`"
@@ -130,7 +130,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@ayiin_cmd(pattern="nah(?: |$)(.*)")
+@icalp_cmd(pattern="nah(?: |$)(.*)")
 async def _(ayiin):
     await ayiin.edit("`\n(\\_/)`"
                      "`\n(●_●)`"
