@@ -24,7 +24,7 @@ from AyiinXd import CMD_HELP
 from AyiinXd.ayiin import edit_or_reply, ayiin_cmd
 
 
-@ayiin_cmd(pattern="shibe$")
+@icalp_cmd(pattern="shibe$")
 async def shibe(event):
     xx = await edit_or_reply(event, "`Processing...`")
     response = requests.get("https://shibe.online/api/shibes").json()
@@ -35,7 +35,7 @@ async def shibe(event):
     await xx.delete()
 
 
-@ayiin_cmd(pattern="cat$")
+@icalp_cmd(pattern="cat$")
 async def cats(event):
     xx = await edit_or_reply(event, "`Processing...`")
     response = requests.get("https://shibe.online/api/cats").json()
