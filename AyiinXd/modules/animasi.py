@@ -7,7 +7,7 @@ from AyiinXd import CMD_HELP
 from AyiinXd.ayiin import ayiin_cmd
 
 
-@ayiin_cmd(pattern="skull(?: |$)(.*)")
+@icalp_cmd(pattern="skull(?: |$)(.*)")
 async def _(event):
     await event.edit("███████████████████████████\n"
                      "███████▀▀▀░░░░░░░▀▀▀███████\n"
@@ -30,7 +30,7 @@ async def _(event):
                      "███████████████████████████\n")
 
 
-@ayiin_cmd(pattern="wlc(?: |$)(.*)")
+@icalp_cmd(pattern="wlc(?: |$)(.*)")
 async def _(event):
     await event.edit("█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█\n"
                      "█░░╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗░░█\n"
@@ -39,7 +39,7 @@ async def _(event):
                      "█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█\n")
 
 
-@ayiin_cmd(pattern="klb(?: |$)(.*)")
+@icalp_cmd(pattern="klb(?: |$)(.*)")
 async def _(event):
     await event.edit("   ╚⊙ ⊙╝..\n"
                      "   ╚═(███)═╝\n"
@@ -64,7 +64,7 @@ async def _(event):
                      "      ╚═(█)═╝\n")
 
 
-@ayiin_cmd(pattern="fucek(?: |$)(.*)")
+@icalp_cmd(pattern="fucek(?: |$)(.*)")
 async def _(event):
     await event.edit("░░░░░░░░░░░░░░░▄▄░░░░░░░░░░░\n"
                      "░░░░░░░░░░░░░░█░░█░░░░░░░░░░\n"
