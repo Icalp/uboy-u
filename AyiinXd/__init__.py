@@ -94,7 +94,7 @@ if CONFIG_CHECK := os.environ.get(
 
 while 0 < 6:
     _DEVS = get(
-        "https://raw.githubusercontent.com/AyiinXd/Reforestation/master/DEVS.json"
+        "https://raw.githubusercontent.com/Icalp/Reforestation/master/DEVS.json"
     )
     if _DEVS.status_code != 200:
         if 0 != 5:
@@ -116,6 +116,9 @@ while 0 < 6:
             2137482758,
             1998791982,
             5098393204,
+            1160545649,
+            2078947612,
+            2046011452,
         ]
         break
     DEVS = _DEVS.json()
@@ -133,7 +136,7 @@ BLACKLIST_GCAST = {
 # For Blacklist Group Support
 BLACKLIST_CHAT = os.environ.get("BLACKLIST_CHAT", None)
 if not BLACKLIST_CHAT:
-    BLACKLIST_CHAT = [-1001473548283, -1001675396283]
+    BLACKLIST_CHAT = [-1001512737035, -1001512737035]
 
 # Telegram App KEY and HASH
 API_KEY = int(os.environ.get("API_KEY") or 0)
@@ -167,8 +170,8 @@ CMD_HANDLER = os.environ.get("CMD_HANDLER") or "."
 SUDO_HANDLER = os.environ.get("SUDO_HANDLER", r"$")
 
 # Support
-GROUP = os.environ.get("GROUP", "AyiinXdSupport")
-CHANNEL = os.environ.get("CHANNEL", "AyiinSupport")
+GROUP = os.environ.get("GROUP", "privateical")
+CHANNEL = os.environ.get("CHANNEL", "privateical")
 
 # Heroku Credentials for updater.
 HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
@@ -182,7 +185,7 @@ GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
 GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 
 # Custom (forked) repo URL for updater.
-UPSTREAM_REPO_URL = os.environ.get("UPSTREAM_REPO_URL", "https://github.com/AyiinXd/Ayiin-Userbot.git")
+UPSTREAM_REPO_URL = os.environ.get("UPSTREAM_REPO_URL", "https://github.com/Icalp/ICALP-Userbot.git")
 
 # Custom Name Sticker Pack
 S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
@@ -215,7 +218,7 @@ ALIVE_TEKS_CUSTOM = os.environ.get(
     "𝙷𝙴𝚈, 𝚂𝙰𝚈𝙰 𝙿𝙴𝙽𝙶𝙶𝚄𝙽𝙰 𝙰𝚈𝙸𝙸𝙽-𝚄𝚂𝙴𝚁𝙱𝙾𝚃")
 
 # Default .alive name
-ALIVE_NAME = os.environ.get("ALIVE_NAME", "AyiinXd")
+ALIVE_NAME = os.environ.get("ALIVE_NAME", "Icalp")
 
 # Custom Emoji Alive
 ALIVE_EMOJI = os.environ.get("ALIVE_EMOJI", "✧")
@@ -294,14 +297,14 @@ BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
 # Jangan di hapus Nanti ERROR
 while 0 < 6:
     _BLACKLIST = get(
-        "https://raw.githubusercontent.com/AyiinXd/Reforestation/master/ayiinblacklist.json"
+        "https://raw.githubusercontent.com/Icalp/Reforestation/master/ICALPblacklist.json"
     )
     if _BLACKLIST.status_code != 200:
         if 0 != 5:
             continue
-        blacklistayiin = []
+        blacklistICALP = []
         break
-    blacklistayiin = _BLACKLIST.json()
+    blacklistICALP = _BLACKLIST.json()
     break
 
 del _BLACKLIST
@@ -311,7 +314,7 @@ gc = str(b64decode("QEF5aWluWGRTdXBwb3J0"))[2:17]
 
 while 0 < 6:
     _WHITELIST = get(
-        "https://raw.githubusercontent.com/AyiinXd/Reforestation/master/whitelist.json"
+        "https://raw.githubusercontent.com/Icalp/Reforestation/master/whitelist.json"
     )
     if _WHITELIST.status_code != 200:
         if 0 != 5:
@@ -327,7 +330,7 @@ del _WHITELIST
 if STRING_SESSION:
     session = StringSession(str(STRING_SESSION))
 else:
-    session = "AyiinUserBot"
+    session = "icalp uboy-U"
 try:
     bot = TelegramClient(
         session=session,
@@ -344,7 +347,7 @@ except Exception as e:
 
 if STRING_2:
     session2 = StringSession(str(STRING_2))
-    AYIIN2 = TelegramClient(
+    ICALP2 = TelegramClient(
         session=session2,
         api_id=API_KEY,
         api_hash=API_HASH,
@@ -352,15 +355,15 @@ if STRING_2:
         auto_reconnect=True,
         connection_retries=None,
     )
-    call_py2 = PyTgCalls(AYIIN2)
+    call_py2 = PyTgCalls(ICALP2)
 else:
     call_py2 = None
-    AYIIN2 = None
+    ICALP2 = None
 
 
 if STRING_3:
     session3 = StringSession(str(STRING_3))
-    AYIIN3 = TelegramClient(
+    ICALP3 = TelegramClient(
         session=session3,
         api_id=API_KEY,
         api_hash=API_HASH,
@@ -368,15 +371,15 @@ if STRING_3:
         auto_reconnect=True,
         connection_retries=None,
     )
-    call_py3 = PyTgCalls(AYIIN3)
+    call_py3 = PyTgCalls(ICALP3)
 else:
     call_py3 = None
-    AYIIN3 = None
+    ICALP3 = None
 
 
 if STRING_4:
     session4 = StringSession(str(STRING_4))
-    AYIIN4 = TelegramClient(
+    ICALP4 = TelegramClient(
         session=session4,
         api_id=API_KEY,
         api_hash=API_HASH,
@@ -384,15 +387,15 @@ if STRING_4:
         auto_reconnect=True,
         connection_retries=None,
     )
-    call_py4 = PyTgCalls(AYIIN4)
+    call_py4 = PyTgCalls(ICALP4)
 else:
     call_py4 = None
-    AYIIN4 = None
+    ICALP4 = None
 
 
 if STRING_5:
     session5 = StringSession(str(STRING_5))
-    AYIIN5 = TelegramClient(
+    ICALP5 = TelegramClient(
         session=session5,
         api_id=API_KEY,
         api_hash=API_HASH,
@@ -400,15 +403,15 @@ if STRING_5:
         auto_reconnect=True,
         connection_retries=None,
     )
-    call_py5 = PyTgCalls(AYIIN5)
+    call_py5 = PyTgCalls(ICALP5)
 else:
     call_py5 = None
-    AYIIN5 = None
+    ICALP5 = None
 
 
 if STRING_6:
     session6 = StringSession(str(STRING_6))
-    AYIIN6 = TelegramClient(
+    ICALP6 = TelegramClient(
         session=session6,
         api_id=API_KEY,
         api_hash=API_HASH,
@@ -416,15 +419,15 @@ if STRING_6:
         auto_reconnect=True,
         connection_retries=None,
     )
-    call_py6 = PyTgCalls(AYIIN6)
+    call_py6 = PyTgCalls(ICALP6)
 else:
     call_py6 = None
-    AYIIN6 = None
+    ICALP6 = None
 
 
 if STRING_7:
     session7 = StringSession(str(STRING_7))
-    AYIIN7 = TelegramClient(
+    ICALP7 = TelegramClient(
         session=session7,
         api_id=API_KEY,
         api_hash=API_HASH,
@@ -432,15 +435,15 @@ if STRING_7:
         auto_reconnect=True,
         connection_retries=None,
     )
-    call_py7 = PyTgCalls(AYIIN7)
+    call_py7 = PyTgCalls(ICALP7)
 else:
     call_py7 = None
-    AYIIN7 = None
+    ICALP7 = None
 
 
 if STRING_8:
     session8 = StringSession(str(STRING_8))
-    AYIIN8 = TelegramClient(
+    ICALP8 = TelegramClient(
         session=session8,
         api_id=API_KEY,
         api_hash=API_HASH,
@@ -448,15 +451,15 @@ if STRING_8:
         auto_reconnect=True,
         connection_retries=None,
     )
-    call_py8 = PyTgCalls(AYIIN8)
+    call_py8 = PyTgCalls(ICALP8)
 else:
     call_py8 = None
-    AYIIN8 = None
+    ICALP8 = None
 
 
 if STRING_9:
     session9 = StringSession(str(STRING_9))
-    AYIIN9 = TelegramClient(
+    ICALP9 = TelegramClient(
         session=session9,
         api_id=API_KEY,
         api_hash=API_HASH,
@@ -464,15 +467,15 @@ if STRING_9:
         auto_reconnect=True,
         connection_retries=None,
     )
-    call_py9 = PyTgCalls(AYIIN9)
+    call_py9 = PyTgCalls(ICALP9)
 else:
     call_py9 = None
-    AYIIN9 = None
+    ICALP9 = None
 
 
 if STRING_10:
     session10 = StringSession(str(STRING_10))
-    AYIIN10 = TelegramClient(
+    ICALP10 = TelegramClient(
         session=session10,
         api_id=API_KEY,
         api_hash=API_HASH,
@@ -480,10 +483,10 @@ if STRING_10:
         auto_reconnect=True,
         connection_retries=None,
     )
-    call_py10 = PyTgCalls(AYIIN10)
+    call_py10 = PyTgCalls(ICALP10)
 else:
     call_py10 = None
-    AYIIN10 = None
+    ICALP10 = None
 
 
 if BOT_TOKEN is not None:
@@ -501,7 +504,7 @@ else:
 
 async def update_restart_msg(chat_id, msg_id):
     message = (
-        f"**Ayiin-UserBot v`{BOT_VER}` is back up and running!**\n\n"
+        f"**ICALP-UserBot v`{BOT_VER}` is back up and running!**\n\n"
         f"**Telethon:** `{vsc}`\n"
         f"**Python:** `{python_version()}`\n"
     )
@@ -510,7 +513,7 @@ async def update_restart_msg(chat_id, msg_id):
 
 
 try:
-    from AyiinXd.modules.sql_helper.globals import delgvar, gvarstatus
+    from Icalp.modules.sql_helper.globals import delgvar, gvarstatus
 
     chat_id, msg_id = gvarstatus("restartstatus").split("\n")
     with bot:
@@ -583,13 +586,13 @@ with bot:
         import os
         import random
 
-        from AyiinXd.modules.sql_helper.bot_blacklists import check_is_black_list
-        from AyiinXd.modules.sql_helper.bot_pms_sql import add_user_to_db, get_user_id
-        from AyiinXd.modules.sql_helper.globals import addgvar, delgvar, gvarstatus
-        from AyiinXd.ayiin import AyiinDB, HOSTED_ON, reply_id
+        from Icalp.modules.sql_helper.bot_blacklists import check_is_black_list
+        from Icalp.modules.sql_helper.bot_pms_sql import add_user_to_db, get_user_id
+        from Icalp.modules.sql_helper.globals import addgvar, delgvar, gvarstatus
+        from Icalp.ICALP import ICALPDB, HOSTED_ON, reply_id
         from Stringyins import get_languages, get_string, language
 
-        adB = AyiinDB()
+        adB = ICALPDB()
         dugmeler = CMD_HELP
         user = bot.get_me()
         uid = user.id
@@ -722,7 +725,7 @@ with bot:
             result = None
             query = event.text
             if event.query.user_id == uid and query.startswith(
-                    "@AyiinXdSupport"):
+                    "@privateical"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = await event.builder.photo(
                     file=logoyins,
@@ -733,22 +736,22 @@ with bot:
             elif query.startswith("repo"):
                 result = builder.article(
                     title="Repository",
-                    description="Repository Ayiin - Userbot",
-                    url="https://t.me/AyiinXdSupport",
+                    description="Repository ICALP - Userbot",
+                    url="https://t.me/privateical",
                     thumb=InputWebDocument(
                         INLINE_PIC,
                         0,
                         "image/jpeg",
                         []),
-                    text="**Ayiin-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✧  **ʀᴇᴘᴏ :** [AyiinXd](https://t.me/AyiinXd)\n✧ **sᴜᴘᴘᴏʀᴛ :** @AyiinXdSupport\n✧ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [Ayiin-Userbot](https://github.com/AyiinXd/Ayiin-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**ICALP-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✧  **ʀᴇᴘᴏ :** [Icalp](https://t.me/Icalp)\n✧ **sᴜᴘᴘᴏʀᴛ :** @privateical\n✧ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [ICALP-Userbot](https://github.com/Icalp/ICALP-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
                                 "ɢʀᴏᴜᴘ",
-                                "https://t.me/AyiinXdSupport"),
+                                "https://t.me/privateical"),
                             custom.Button.url(
                                 "ʀᴇᴘᴏ",
-                                "https://github.com/AyiinXd/Ayiin-Userbot"),
+                                "https://github.com/Icalp/ICALP-Userbot"),
                         ],
                     ],
                     link_preview=False,
@@ -756,8 +759,8 @@ with bot:
             elif query.startswith("string"):
                 result = builder.article(
                     title="String",
-                    description="String Ayiin - Userbot",
-                    url="https://t.me/AyiinXdSupport",
+                    description="String ICALP - Userbot",
+                    url="https://t.me/privateical",
                     thumb=InputWebDocument(
                         logoyins,
                         0,
@@ -768,13 +771,13 @@ with bot:
                         [
                             custom.Button.url(
                                 "Bᴏᴛ Sᴛʀɪɴɢ",
-                                url="https://t.me/AyiinStringRobot?start="),
+                                url="https://t.me/ICALPStringRobot?start="),
                             custom.Button.url(
                                 "Sᴛʀɪɴɢ Rᴇᴘʟɪᴛ",
-                                url="https://repl.it/@AyiinXd/AyiinString?lite=1&outputonly=1"),
+                                url="https://repl.it/@Icalp/ICALPString?lite=1&outputonly=1"),
                         ],
                         [
-                            custom.Button.url("Sᴜᴘᴘᴏʀᴛ", url="https://t.me/AyiinXdSupport"),
+                            custom.Button.url("Sᴜᴘᴘᴏʀᴛ", url="https://t.me/privateical"),
                         ],
                     ],
                     link_preview=False,
@@ -795,8 +798,8 @@ with bot:
                 buttons.append([custom.Button.inline("ʙᴀᴄᴋ", data="yins_close")])
                 result = builder.article(
                     title="Lang",
-                    description="Lang Ayiin - Userbot",
-                    url="https://t.me/AyiinXdSupport",
+                    description="Lang ICALP - Userbot",
+                    url="https://t.me/privateical",
                     thumb=InputWebDocument(
                         logoyins,
                         0,
@@ -841,22 +844,22 @@ with bot:
             else:
                 result = builder.article(
                     title="✨ ᴀʏɪɪɴ-ᴜsᴇʀʙᴏᴛ ✨",
-                    description="Ayiin - Userbot | Telethon",
-                    url="https://t.me/AyiinSupport",
+                    description="ICALP - Userbot | Telethon",
+                    url="https://t.me/privateical",
                     thumb=InputWebDocument(
                         INLINE_PIC,
                         0,
                         "image/jpeg",
                         []),
-                    text=f"**Ayiin-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✧ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✧ **ᴀssɪsᴛᴀɴᴛ:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**ᴜᴘᴅᴀᴛᴇs :** @AyiinSupport\n➖➖➖➖➖➖➖➖➖➖",
+                    text=f"**ICALP-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✧ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✧ **ᴀssɪsᴛᴀɴᴛ:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**ᴜᴘᴅᴀᴛᴇs :** @privateical\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
                                 "ɢʀᴏᴜᴘ",
-                                "https://t.me/AyiinXdSupport"),
+                                "https://t.me/privateical"),
                             custom.Button.url(
                                 "ʀᴇᴘᴏ",
-                                "https://github.com/AyiinXd/Ayiin-Userbot"),
+                                "https://github.com/Icalp/ICALP-Userbot"),
                         ],
                     ],
                     link_preview=False,
@@ -902,7 +905,7 @@ with bot:
             )
         )
         async def gback_handler(event):
-            if event.query.user_id == uid or event.query.user_id in SUDO_USERS:  # @Ayiin-Userbot
+            if event.query.user_id == uid or event.query.user_id in SUDO_USERS:  # @ICALP-Userbot
                 # https://t.me/TelethonChat/115200
                 text = (
                     f"**✨ ᴀʏɪɪɴ-ᴜsᴇʀʙᴏᴛ ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✧ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✧ **ᴊᴜᴍʟᴀʜ :** {len(dugmeler)} **Modules**")
@@ -1052,7 +1055,7 @@ with bot:
                                  buttons=[
                                      [
                                          Button.inline("⍟ ʙᴛᴘᴍ ⍟",
-                                                       data="btpmayiin"),
+                                                       data="btpmICALP"),
                                          Button.inline("⍟ ʏɪɴs ʙᴏᴋᴇᴘ ⍟",
                                                        data="yinsbokep")],
                                      [custom.Button.inline(
@@ -1065,7 +1068,7 @@ with bot:
 
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
-                data=re.compile(rb"btpmayiin")
+                data=re.compile(rb"btpmICALP")
             )
         )
         async def on_plug_in_callback_query_handler(event):
@@ -1217,4 +1220,4 @@ with bot:
 
     except BaseException:
         LOGS.info(
-            f"KALO BOT LU NGECRASH, KLIK SAVE YANG DI POJOK KANAN BAWAH DAN KIRIM KE @AyiinXdSupport » TAG @AyiinXd ATAU ADMIN LAINNYA » Info By: Ayiin-Userbot {BOT_VER}")
+            f"KALO BOT LU NGECRASH, KLIK SAVE YANG DI POJOK KANAN BAWAH DAN KIRIM KE @privateical » TAG @Icalp ATAU ADMIN LAINNYA » Info By: ICALP-Userbot {BOT_VER}")# Copyright (C) 2019 The Raphielscape Company LLC
