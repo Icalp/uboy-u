@@ -12,7 +12,7 @@ from AyiinXd.ayiin import ayiin_cmd, eor
 from Stringyins import get_string
 
 
-@ayiin_cmd(pattern="adzan(?:\\s|$)([\\s\\S]*)")
+@icalp_cmd(pattern="adzan(?:\\s|$)([\\s\\S]*)")
 async def get_adzan(adzan):
     "Shows you the Islamic prayer times of the given city name"
     input_str = adzan.pattern_match.group(1)
