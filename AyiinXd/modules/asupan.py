@@ -13,7 +13,7 @@ from AyiinXd import CMD_HELP
 from AyiinXd.ayiin import ayiin_cmd, edit_or_reply
 
 
-@ayiin_cmd(pattern="asupan$")
+@icalp_cmd(pattern="asupan$")
 async def _(event):
     xx = await edit_or_reply(event, "`Tunggu Sebentar...`")
     try:
@@ -31,7 +31,7 @@ async def _(event):
         await xx.edit("**Tidak bisa menemukan video asupan.**")
 
 
-@ayiin_cmd(pattern="desahcewe$")
+@icalp_cmd(pattern="desahcewe$")
 async def _(event):
     if event.chat_id in BLACKLIST_CHAT:
         return await edit_or_reply(
@@ -53,7 +53,7 @@ async def _(event):
         await xx.edit("**Tidak bisa menemukan desahan cewe.**")
 
 
-@ayiin_cmd(pattern="desahcowo$")
+@icalp_cmd(pattern="desahcowo$")
 async def _(event):
     if event.chat_id in BLACKLIST_CHAT:
         return await edit_or_reply(
