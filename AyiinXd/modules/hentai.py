@@ -15,7 +15,7 @@ from AyiinXd.ayiin import ayiin_cmd, eor
 from Stringyins import get_string
 
 
-@ayiin_cmd(pattern="hentai(?: |$)(.*)")
+@icalp_cmd(pattern="hentai(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
