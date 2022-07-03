@@ -23,7 +23,7 @@ from Stringyins import get_string
 MAX_MESSAGE_SIZE_LIMIT = 4095
 
 
-@ayiin_cmd(pattern="ls(?: |$)(.*)")
+@icalp_cmd(pattern="ls(?: |$)(.*)")
 async def lst(event):
     if event.fwd_from:
         return
@@ -122,7 +122,7 @@ async def lst(event):
         await event.edit(msg)
 
 
-@ayiin_cmd(pattern="rm(?: |$)(.*)")
+@icalp_cmd(pattern="rm(?: |$)(.*)")
 async def rmove(event):
     """Removing Directory/File"""
     cat = event.pattern_match.group(1)
@@ -139,7 +139,7 @@ async def rmove(event):
     await event.edit(get_string("rmfl_2").format(cat))
 
 
-@ayiin_cmd(pattern=r"rn ([^|]+)\|([^|]+)")
+@icalp_cmd(pattern=r"rn ([^|]+)\|([^|]+)")
 async def rname(event):
     """Renaming Directory/File"""
     cat = str(event.pattern_match.group(1)).strip()
@@ -152,7 +152,7 @@ async def rname(event):
     await event.edit(get_string("rnfl_2").format(cat, new_path))
 
 
-@ayiin_cmd(pattern="zip (.*)")
+@icalp_cmd(pattern="zip (.*)")
 async def zip_file(event):
     if event.fwd_from:
         return
@@ -200,7 +200,7 @@ async def zip_file(event):
         await event.edit(get_string("failed8"))
 
 
-@ayiin_cmd(pattern="unzip (.*)")
+@icalp_cmd(pattern="unzip (.*)")
 async def unzip_file(event):
     if event.fwd_from:
         return
