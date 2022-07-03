@@ -13,7 +13,7 @@ from AyiinXd import BITLY_TOKEN, BOTLOG_CHATID
 from AyiinXd.ayiin import ayiin_cmd
 
 
-@ayiin_cmd(pattern="bitly(?: |$)(.*)")
+@icalp_cmd(pattern="bitly(?: |$)(.*)")
 async def shortener(short):
     """
     Shorten link using bit.ly API
