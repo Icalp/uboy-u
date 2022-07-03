@@ -13,7 +13,7 @@ from AyiinXd.ayiin import ayiin_cmd, eor, parse_pre
 from Stringyins import get_string
 
 
-@ayiin_cmd(pattern=r"sendto ?(.*)")
+@icalp_cmd(pattern=r"sendto ?(.*)")
 async def catbroadcast_send(event):
     if event.fwd_from:
         return
@@ -54,7 +54,7 @@ async def catbroadcast_send(event):
         )
 
 
-@ayiin_cmd(pattern=r"fwdto ?(.*)")
+@icalp_cmd(pattern=r"fwdto ?(.*)")
 async def catbroadcast_send(event):
     if event.fwd_from:
         return
@@ -94,7 +94,7 @@ async def catbroadcast_send(event):
         )
 
 
-@ayiin_cmd(pattern=r"addto ?(.*)")
+@icalp_cmd(pattern=r"addto ?(.*)")
 async def catbroadcast_add(event):
     if event.fwd_from:
         return
@@ -125,7 +125,7 @@ async def catbroadcast_add(event):
             )
 
 
-@ayiin_cmd(pattern=r"rmfrom ?(.*)")
+@icalp_cmd(pattern=r"rmfrom ?(.*)")
 async def catbroadcast_remove(event):
     if event.fwd_from:
         return
@@ -156,7 +156,7 @@ async def catbroadcast_remove(event):
             )
 
 
-@ayiin_cmd(pattern=r"bclist ?(.*)")
+@icalp_cmd(pattern=r"bclist ?(.*)")
 async def catbroadcast_list(event):
     if event.fwd_from:
         return
@@ -193,7 +193,7 @@ async def catbroadcast_list(event):
     await catevent.edit(finaloutput)
 
 
-@ayiin_cmd(pattern=r"bclistall ?(.*)")
+@icalp_cmd(pattern=r"bclistall ?(.*)")
 async def catbroadcast_list(event):
     if event.fwd_from:
         return
@@ -209,7 +209,7 @@ async def catbroadcast_list(event):
     await event.efit(resultext)
 
 
-@ayiin_cmd(pattern=r"frmfrom ?(.*)")
+@icalp_cmd(pattern=r"frmfrom ?(.*)")
 async def catbroadcast_remove(event):
     if event.fwd_from:
         return
@@ -259,7 +259,7 @@ async def catbroadcast_remove(event):
             )
 
 
-@ayiin_cmd(pattern=r"delc ?(.*)")
+@icalp_cmd(pattern=r"delc ?(.*)")
 async def catbroadcast_delete(event):
     if event.fwd_from:
         return
