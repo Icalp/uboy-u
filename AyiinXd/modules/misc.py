@@ -41,7 +41,7 @@ useragent = "Mozilla/5.0 (Linux; Android 9; SM-G960F Build/PPR1.180610.011; wv) 
 opener.addheaders = [("User-agent", useragent)]
 
 
-@ayiin_cmd(pattern="sleep ([0-9]+)$", allow_sudo=False)
+@icalp_cmd(pattern="sleep ([0-9]+)$", allow_sudo=False)
 async def sleepybot(time):
     counter = int(time.pattern_match.group(1))
     xx = await eor(time, get_string("slbt_1"))
@@ -54,7 +54,7 @@ async def sleepybot(time):
     await xx.edit(get_string("slbt_3"))
 
 
-@ayiin_cmd(pattern="shutdown$", allow_sudo=False)
+@icalp_cmd(pattern="shutdown$", allow_sudo=False)
 async def shutdown_bot(event):
     if event.fwd_from:
         return
@@ -69,7 +69,7 @@ async def shutdown_bot(event):
         sys.exit(0)
 
 
-@ayiin_cmd(pattern="restart$", allow_sudo=False)
+@icalp_cmd(pattern="restart$", allow_sudo=False)
 async def restart_bot(event):
     await eor(event, get_string("rstrt_1"))
     if BOTLOG_CHATID:
@@ -80,14 +80,14 @@ async def restart_bot(event):
     execle(sys.executable, *args, environ)
 
 
-@ayiin_cmd(pattern="readme$")
+@icalp_cmd(pattern="readme$")
 async def reedme(event):
     await eor(
         event, get_string("rdme_1")
     )
 
 
-@ayiin_cmd(pattern="repeat (.*)")
+@icalp_cmd(pattern="repeat (.*)")
 async def repeat(event):
     cnt, txt = event.pattern_match.group(1).split(" ", 1)
     replyCount = int(cnt)
@@ -101,7 +101,7 @@ async def repeat(event):
     await eor(event, replyText)
 
 
-@ayiin_cmd(pattern="repo$")
+@icalp_cmd(pattern="repo$")
 async def repo_is_here(event):
     ayiin = await eor(event, "🤖")
     sleep(3)
@@ -109,7 +109,7 @@ async def repo_is_here(event):
     )
 
 
-@ayiin_cmd(pattern="raw$")
+@icalp_cmd(pattern="raw$")
 async def raw(event):
     the_real_message = None
     reply_to_id = None
@@ -135,7 +135,7 @@ async def raw(event):
         )
 
 
-@ayiin_cmd(pattern="reverse(?: |$)(\\d*)")
+@icalp_cmd(pattern="reverse(?: |$)(\\d*)")
 async def okgoogle(img):
     if os.path.isfile("okgoogle.png"):
         os.remove("okgoogle.png")
@@ -233,7 +233,7 @@ async def scam(results, lim):
     return imglinks
 
 
-@ayiin_cmd(pattern="send (.*)")
+@icalp_cmd(pattern="send (.*)")
 async def send(event):
     if not event.is_reply:
         return await eor(
