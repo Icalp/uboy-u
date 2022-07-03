@@ -15,7 +15,7 @@ from AyiinXd.ayiin import ayiin_cmd, eod, eor
 from Stringyins import get_string
 
 
-@ayiin_cmd(pattern="kamuii(:? |$)([1-8])?")
+@icalp_cmd(pattern="kamuii(:? |$)([1-8])?")
 async def _(fry):
     xx = await eor(fry, get_string("kamui_1"))
     level = fry.pattern_match.group(2)
