@@ -13,7 +13,7 @@ from AyiinXd.ayiin import ayiin_cmd
 from Stringyins import get_string
 
 
-@ayiin_cmd(pattern="buat (gb|g|c)(?: |$)(.*)")
+@icalp_cmd(pattern="buat (gb|g|c)(?: |$)(.*)")
 async def _(grop):
     """For .create command, Creating New Group & Channel"""
     if grop.text[0].isalpha() or grop.text[0] in ("/", "#", "@", "!"):
