@@ -43,7 +43,7 @@ from AyiinXd.ayiin import check_media
 from Stringyins import get_string
 
 
-@ayiin_cmd(pattern="deepfry(?: |$)(.*)")
+@icalp_cmd(pattern="deepfry(?: |$)(.*)")
 async def deepfryer(event):
     try:
         frycount = int(event.pattern_match.group(1))
