@@ -21,7 +21,7 @@ from Stringyins import get_string
 # ========================×========================
 
 
-@ayiin_cmd(pattern="dgrup(?: |$)(.*)")
+@icalp_cmd(pattern="dgrup(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
