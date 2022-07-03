@@ -19,7 +19,7 @@ from AyiinXd.ayiin import ayiin_cmd
 from Stringyins import get_string
 
 
-@ayiin_cmd(pattern="info(?: |$)(.*)")
+@icalp_cmd(pattern="info(?: |$)(.*)")
 async def who(event):
 
     await event.edit(get_string("com_7"))
