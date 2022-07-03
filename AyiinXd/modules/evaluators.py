@@ -21,7 +21,7 @@ from Stringyins import get_string
 p, pp = print, pprint
 
 
-@ayiin_cmd(pattern="eval(?:\\s|$)([\\s\\S]*)")
+@icalp_cmd(pattern="eval(?:\\s|$)([\\s\\S]*)")
 async def _(event):
     expression = event.pattern_match.group(1)
     if not expression:
@@ -100,7 +100,7 @@ async def _(event):
         await xx.edit(final_output)
 
 
-@ayiin_cmd(pattern="exec(?: |$|\n)([\\s\\S]*)")
+@icalp_cmd(pattern="exec(?: |$|\n)([\\s\\S]*)")
 async def run(event):
     code = event.pattern_match.group(1)
     if not code:
@@ -150,7 +150,7 @@ async def run(event):
     await eor(event, get_string("devs_5").format(codepre, stdout))
 
 
-@ayiin_cmd(pattern="bash(?: |$|\n)([\\s\\S]*)")
+@icalp_cmd(pattern="bash(?: |$|\n)([\\s\\S]*)")
 async def terminal_runner(event):
     command = event.pattern_match.group(1)
     if not command:
@@ -183,7 +183,7 @@ async def terminal_runner(event):
     await eor(event, get_string("devs_5").format(command, result))
 
 
-@ayiin_cmd(pattern="json$")
+@icalp_cmd(pattern="json$")
 async def _(event):
     if event.fwd_from:
         return
