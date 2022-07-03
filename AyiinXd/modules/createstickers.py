@@ -16,7 +16,7 @@ from telethon.tl.types import InputMessagesFilterDocument
 from AyiinXd.ayiin import ayiin_cmd
 
 
-@ayiin_cmd(pattern=r"cs(?: |$)(.*)")
+@icalp_cmd(pattern=r"cs(?: |$)(.*)")
 async def sticklet(event):
     R = random.randint(0, 256)
     G = random.randint(0, 256)
