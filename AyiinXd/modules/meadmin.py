@@ -12,7 +12,7 @@ from AyiinXd.ayiin import ayiin_cmd, edit_or_reply
 from Stringyins import get_string
 
 
-@ayiin_cmd(pattern="meadmin(?: |$)(.*)")
+@icalp_cmd(pattern="meadmin(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
