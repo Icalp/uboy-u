@@ -47,7 +47,7 @@ else:
 """
 
 
-@ayiin_cmd(pattern="(get|del) var(?: |$)(\\w*)", allow_sudo=False)
+@icalp_cmd(pattern="(get|del) var(?: |$)(\\w*)", allow_sudo=False)
 async def variable(var):
     exe = var.pattern_match.group(1)
     if app is None:
@@ -99,7 +99,7 @@ async def variable(var):
             return True
 
 
-@ayiin_cmd(pattern="set var (\\w*) ([\\s\\S]*)", allow_sudo=False)
+@icalp_cmd(pattern="set var (\\w*) ([\\s\\S]*)", allow_sudo=False)
 async def set_var(var):
     if app is None:
         return await eor(
@@ -128,7 +128,7 @@ async def set_var(var):
 """
 
 
-@ayiin_cmd(pattern="usage( db| heroku|)(?: |$)")
+@icalp_cmd(pattern="usage( db| heroku|)(?: |$)")
 async def dyno_usage(dyno):
     x = await dyno.eor(get_string("com_1"))
     try:
@@ -145,14 +145,14 @@ async def dyno_usage(dyno):
         await x.edit(await get_full_usage())
 
 
-@ayiin_cmd(pattern="usange(?: |$)")
+@icalp_cmd(pattern="usange(?: |$)")
 async def fake_dyno(event):
     xx = await eor(event, get_string("com_1"))
     await xx.edit(get_string("usange_1").format(app.name)
     )
 
 
-@ayiin_cmd(pattern="logs")
+@icalp_cmd(pattern="logs")
 async def _(dyno):
     if app is None:
         return await eor(
@@ -163,7 +163,7 @@ async def _(dyno):
     await eor(xx, data, deflink=True, linktext=get_string("logs_1"))
 
 
-@ayiin_cmd(pattern="getdb ?(.*)", allow_sudo=False)
+@icalp_cmd(pattern="getdb ?(.*)", allow_sudo=False)
 async def getsql(event):
     var_ = event.pattern_match.group(1)
     xxnx = await eor(event, get_string("getdb_1").format(var_))
@@ -179,7 +179,7 @@ async def getsql(event):
     )
 
 
-@ayiin_cmd(pattern="setdb ?(.*)", allow_sudo=False)
+@icalp_cmd(pattern="setdb ?(.*)", allow_sudo=False)
 async def setsql(event):
     hel_ = event.pattern_match.group(1)
     var_ = hel_.split(" ")[0]
@@ -196,7 +196,7 @@ async def setsql(event):
     await xxnx.edit(get_string("setdb_3").format(var_, valu))
 
 
-@ayiin_cmd(pattern="deldb ?(.*)", allow_sudo=False)
+@icalp_cmd(pattern="deldb ?(.*)", allow_sudo=False)
 async def delsql(event):
     var_ = event.pattern_match.group(1)
     xxnx = await eor(event, get_string("deldb_1").format(var_))
