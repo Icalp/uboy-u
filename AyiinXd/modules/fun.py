@@ -15,7 +15,7 @@ from AyiinXd.ayiin import ayiin_cmd, bash, eod, eor, progress
 from Stringyins import get_string
 
 
-@ayiin_cmd(pattern="honka(?: |$)(.*)")
+@icalp_cmd(pattern="honka(?: |$)(.*)")
 async def frg(animu):
     text = animu.pattern_match.group(1)
     xx = await eor(animu, get_string("com_1"))
@@ -36,7 +36,7 @@ async def frg(animu):
     await xx.delete()
 
 
-@ayiin_cmd(pattern="rgif(?: |$)(.*)")
+@icalp_cmd(pattern="rgif(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
