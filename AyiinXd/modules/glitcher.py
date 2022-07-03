@@ -20,7 +20,7 @@ from Stringyins import get_string
 Glitched = TEMP_DOWNLOAD_DIRECTORY + "glitch.gif"
 
 
-@ayiin_cmd(pattern="glitch(?: |$)(.*)")
+@icalp_cmd(pattern="glitch(?: |$)(.*)")
 async def glitch(event):
     if not event.reply_to_msg_id:
         return await eor(event, get_string("gltch_1"))
