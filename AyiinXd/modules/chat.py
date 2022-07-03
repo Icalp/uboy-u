@@ -47,7 +47,7 @@ from AyiinXd.ayiin import ayiin_cmd, get_user_from_event
 from Stringyins import get_string
 
 
-@ayiin_cmd(pattern="userid$")
+@icalp_cmd(pattern="userid$")
 async def useridgetter(target):
     message = await target.get_reply_message()
     if message:
@@ -66,7 +66,7 @@ async def useridgetter(target):
         await eor(target, get_string("chat_1").format(name, user_id))
 
 
-@ayiin_cmd(pattern="link(?: |$)(.*)")
+@icalp_cmd(pattern="link(?: |$)(.*)")
 async def permalink(mention):
     user, custom = await get_user_from_event(mention)
     if not user:
@@ -79,7 +79,7 @@ async def permalink(mention):
         await eor(mention, get_string("link_2").format(tag, user.id))
 
 
-@ayiin_cmd(pattern="bots(?: |$)(.*)")
+@icalp_cmd(pattern="bots(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -116,7 +116,7 @@ async def _(event):
     await event.reply(choice(absen))
 
 
-@ayiin_cmd(pattern="chatinfo(?: |$)(.*)")
+@icalp_cmd(pattern="chatinfo(?: |$)(.*)")
 async def info(event):
     xx = await eor(event, get_string("com_7"))
     chat = await get_chatinfo(event)
@@ -376,7 +376,7 @@ async def fetch_info(chat, event):
     return caption
 
 
-@ayiin_cmd(pattern="invite(?: |$)(.*)")
+@icalp_cmd(pattern="invite(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -420,7 +420,7 @@ async def _(event):
 # Copyright © Team Geez - Project
 
 
-@ayiin_cmd(pattern="inviteall ?(.*)")
+@icalp_cmd(pattern="inviteall ?(.*)")
 async def get_users(event):
     ayiin_ = event.text[11:]
     chat_ayiin = ayiin_.lower()
@@ -462,7 +462,7 @@ async def get_users(event):
 # Coded By Abdul <https://github.com/DoellBarr>
 
 
-@ayiin_cmd(pattern="getmember$")
+@icalp_cmd(pattern="getmember$")
 async def scrapmem(event):
     chat = event.chat_id
     xx = await eor(event, get_string("com_1"))
@@ -476,7 +476,7 @@ async def scrapmem(event):
     await xx.edit(get_string("gmem_1"))
 
 
-@ayiin_cmd(pattern="addmember$")
+@icalp_cmd(pattern="addmember$")
 async def admem(event):
     xx = await eor(event, get_string("amem_1"))
     chat = await event.get_chat()
