@@ -26,7 +26,7 @@ async def get_task(mode, choice):
     return random.choice(result)
 
 
-@ayiin_cmd(pattern="(task|truth|dare)(?: |$)([1-5]+)?$")
+@icalp_cmd(pattern="(task|truth|dare)(?: |$)([1-5]+)?$")
 async def tod(event):
     tod = event.pattern_match.group(1)
     if tod == "task":
