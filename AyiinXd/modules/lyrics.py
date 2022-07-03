@@ -11,7 +11,7 @@ from AyiinXd.ayiin import ayiin_cmd, eor
 from Stringyins import get_string
 
 
-@ayiin_cmd(pattern="lyrics(?:\\s|$)([\\s\\S]*)")
+@icalp_cmd(pattern="lyrics(?:\\s|$)([\\s\\S]*)")
 async def _(event):
     query = event.pattern_match.group(1)
     if not query:
