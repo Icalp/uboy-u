@@ -5,14 +5,14 @@ from AyiinXd.ayiin import ayiin_cmd, eor
 from Stringyins import get_string
 
 
-@ayiin_cmd(pattern="ihelp$")
+@icalp_cmd(pattern="ihelp$")
 async def usit(event):
     me = await event.client.get_me()
     await eor(event, get_string("hlpr_1").format(me.first_name)
     )
 
 
-@ayiin_cmd(pattern="listvar$")
+@icalp_cmd(pattern="listvar$")
 async def var(event):
     await eor(event, get_string("hlpr_2")
     )
