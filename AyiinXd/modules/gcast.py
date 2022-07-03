@@ -48,7 +48,7 @@ heroku_api = "https://api.heroku.com"
 blchat = os.environ.get("BLACKLIST_GCAST") or ""
 
 
-@ayiin_cmd(pattern="gcast(?: |$)(.*)")
+@icalp_cmd(pattern="gcast(?: |$)(.*)")
 async def gcast(event):
     if xx := event.pattern_match.group(1):
         msg = xx
@@ -77,7 +77,7 @@ async def gcast(event):
     )
 
 
-@ayiin_cmd(pattern="gucast(?: |$)(.*)")
+@icalp_cmd(pattern="gucast(?: |$)(.*)")
 async def gucast(event):
     if xx := event.pattern_match.group(1):
         msg = xx
@@ -106,7 +106,7 @@ async def gucast(event):
     )
 
 
-@ayiin_cmd(pattern="blchat$")
+@icalp_cmd(pattern="blchat$")
 async def sudo(event):
     blacklistgc = "True" if BLACKLIST_GCAST else "False"
     blc = blchat
@@ -119,7 +119,7 @@ async def sudo(event):
         await eod(event, get_string("blkls_2"))
 
 
-@ayiin_cmd(pattern="addblacklist(?:\\s|$)([\\s\\S]*)")
+@icalp_cmd(pattern="addblacklist(?:\\s|$)([\\s\\S]*)")
 async def add(event):
     xxnx = await eor(event, get_string("com_1"))
     var = "BLACKLIST_GCAST"
@@ -148,7 +148,7 @@ async def add(event):
     heroku_Config[var] = blacklistgrup
 
 
-@ayiin_cmd(pattern="delblacklist(?:\\s|$)([\\s\\S]*)")
+@icalp_cmd(pattern="delblacklist(?:\\s|$)([\\s\\S]*)")
 async def _(event):
     xxx = await eor(event, get_string("com_1"))
     gc = event.chat_id
