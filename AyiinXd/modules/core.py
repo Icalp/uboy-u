@@ -12,7 +12,7 @@ from AyiinXd.ayiin import ayiin_cmd, load_module, remove_plugin, reply_id
 from Stringyins import get_string
 
 
-@ayiin_cmd(pattern="install$")
+@icalp_cmd(pattern="install$")
 async def _(event):
     if event.fwd_from:
         return
@@ -40,7 +40,7 @@ async def _(event):
             os.remove(downloaded_file_name)
 
 
-@ayiin_cmd(pattern="psend ([\\s\\S]*)")
+@icalp_cmd(pattern="psend ([\\s\\S]*)")
 async def send(event):
     reply_to_id = await reply_id(event)
     input_str = event.pattern_match.group(1)
@@ -60,7 +60,7 @@ async def send(event):
         await eor(event, get_string("core_6"))
 
 
-@ayiin_cmd(pattern="uninstall (?P<shortname>\\w+)")
+@icalp_cmd(pattern="uninstall (?P<shortname>\\w+)")
 async def uninstall(event):
     if event.fwd_from:
         return
