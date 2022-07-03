@@ -174,7 +174,7 @@ all_col = [
 ]
 
 
-@ayiin_cmd(pattern="(rc|c)arbon")
+@icalp_cmd(pattern="(rc|c)arbon")
 async def crbn(event):
     from_user = vcmention(event.sender)
     xxxx = await eor(event, get_string("com_1"))
@@ -202,7 +202,7 @@ async def crbn(event):
                       )
 
 
-@ayiin_cmd(pattern="ccarbon ?(.*)")
+@icalp_cmd(pattern="ccarbon ?(.*)")
 async def ccrbn(event):
     from_user = vcmention(event.sender)
     match = event.pattern_match.group(1).strip()
