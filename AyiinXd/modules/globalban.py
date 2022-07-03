@@ -39,7 +39,7 @@ def mentionuser(name, userid):
     return f"[{name}](tg://user?id={userid})"
 
 
-@ayiin_cmd(pattern="gban(?: |$)(.*)")
+@icalp_cmd(pattern="gban(?: |$)(.*)")
 @register(pattern=r"^\.cgban(?: |$)(.*)", sudo=True)
 async def gban(event):
     if event.fwd_from:
@@ -101,7 +101,7 @@ async def gban(event):
         )
 
 
-@ayiin_cmd(pattern="ungban(?: |$)(.*)")
+@icalp_cmd(pattern="ungban(?: |$)(.*)")
 @register(pattern=r"^\.cungban(?: |$)(.*)", sudo=True)
 async def ungban(event):
     if event.fwd_from:
@@ -155,7 +155,7 @@ async def ungban(event):
         )
 
 
-@ayiin_cmd(pattern="listgban$")
+@icalp_cmd(pattern="listgban$")
 async def gablist(event):
     if event.fwd_from:
         return
