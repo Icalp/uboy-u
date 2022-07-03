@@ -16,7 +16,7 @@ from AyiinXd.ayiin import ayiin_cmd, deEmojify, eod
 from Stringyins import get_string
 
 
-@ayiin_cmd(pattern="figlet (\\w+) (.+)")
+@icalp_cmd(pattern="figlet (\\w+) (.+)")
 async def figlet(event):
     if event.fwd_from:
         return
