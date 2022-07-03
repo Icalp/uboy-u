@@ -13,7 +13,7 @@ from AyiinXd.ayiin import ayiin_cmd, eor
 from Stringyins import get_string
 
 
-@ayiin_cmd(pattern="hz(:? |$)(.*)?")
+@icalp_cmd(pattern="hz(:? |$)(.*)?")
 async def _(hazmat):
     xx = await eor(hazmat, get_string("hzmt_1"))
     level = hazmat.pattern_match.group(2)
