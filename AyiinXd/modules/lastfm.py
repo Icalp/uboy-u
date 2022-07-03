@@ -164,7 +164,7 @@ async def get_curr_track(lfmbio):  # sourcery no-metrics
     LASTFM_.RUNNING = False
 
 
-@ayiin_cmd(pattern="lastfm$")
+@icalp_cmd(pattern="lastfm$")
 async def last_fm(lastFM):
     await lastFM.edit("Processing...")
     preview = None
@@ -204,7 +204,7 @@ async def last_fm(lastFM):
         await lastFM.edit(f"{output}", parse_mode="md")
 
 
-@ayiin_cmd(pattern="lastbio (on|off)")
+@icalp_cmd(pattern="lastbio (on|off)")
 async def lastbio(lfmbio):
     arg = lfmbio.pattern_match.group(1).lower()
     if arg == "on":
@@ -226,7 +226,7 @@ async def lastbio(lfmbio):
         await lfmbio.edit(LFM_BIO_ERR)
 
 
-@ayiin_cmd(pattern="lastlog (on|off)")
+@icalp_cmd(pattern="lastlog (on|off)")
 async def lastlog(lstlog):
     arg = lstlog.pattern_match.group(1).lower()
     LASTFM_.LastLog = False
