@@ -11,7 +11,7 @@ from AyiinXd.ayiin import ayiin_cmd, eor
 from Stringyins import get_string
 
 
-@ayiin_cmd(pattern="fgban(?: |$)(.*)")
+@icalp_cmd(pattern="fgban(?: |$)(.*)")
 async def gbun(event):
     if event.fwd_from:
         return
