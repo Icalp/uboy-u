@@ -20,7 +20,7 @@ from Stringyins import get_string
 GIT_TEMP_DIR = "./AyiinXd/temp/"
 
 
-@ayiin_cmd(pattern="gcommit(?: |$)(.*)")
+@icalp_cmd(pattern="gcommit(?: |$)(.*)")
 async def download(event):
     if event.fwd_from:
         return
