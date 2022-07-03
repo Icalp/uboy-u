@@ -18,7 +18,7 @@ if not hasattr(STORAGE, "userObj"):
     STORAGE.userObj = False
 
 
-@ayiin_cmd(pattern="clone ?(.*)", allow_sudo=False)
+@icalp_cmd(pattern="clone ?(.*)", allow_sudo=False)
 async def impostor(event):
     inputArgs = event.pattern_match.group(1)
     AyiinXd = ["@AyiinXd", "@ayiinxd"]
