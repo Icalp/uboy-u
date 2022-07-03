@@ -10,7 +10,7 @@ from AyiinXd import CMD_HELP
 from AyiinXd.ayiin import ayiin_cmd
 
 
-@ayiin_cmd(pattern="dice(?: |$)(.*)")
+@icalp_cmd(pattern="dice(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -27,7 +27,7 @@ async def _(event):
             pass
 
 
-@ayiin_cmd(pattern="dart(?: |$)(.*)")
+@icalp_cmd(pattern="dart(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -44,7 +44,7 @@ async def _(event):
             pass
 
 
-@ayiin_cmd(pattern="basket(?: |$)(.*)")
+@icalp_cmd(pattern="basket(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -61,7 +61,7 @@ async def _(event):
             pass
 
 
-@ayiin_cmd(pattern="bowling(?: |$)(.*)")
+@icalp_cmd(pattern="bowling(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -78,7 +78,7 @@ async def _(event):
             pass
 
 
-@ayiin_cmd(pattern="ball(?: |$)(.*)")
+@icalp_cmd(pattern="ball(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -95,7 +95,7 @@ async def _(event):
             pass
 
 
-@ayiin_cmd(pattern="jackpot(?: |$)(.*)")
+@icalp_cmd(pattern="jackpot(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
