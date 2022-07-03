@@ -4,7 +4,7 @@ from AyiinXd import CMD_HELP
 from AyiinXd.ayiin import ayiin_cmd, edit_or_reply
 
 
-@ayiin_cmd(pattern="teemo(?: |$)(.*)")
+@icalp_cmd(pattern="teemo(?: |$)(.*)")
 async def _(teemo):
     yins = await edit_or_reply(teemo, "`𝙏𝙚𝙚𝙢𝙢𝙤𝙤 𝙈𝙪𝙡𝙪 𝙇𝙪 😏`")
     sleep(2)
@@ -13,7 +13,7 @@ async def _(teemo):
     await yins.edit("`𝙏𝙖𝙥𝙞 𝙆𝙖𝙡𝙤 𝙇𝙪 𝙅𝙖𝙙𝙞𝙖𝙣, 𝙐𝙟𝙪𝙣𝙜-𝙐𝙟𝙪𝙣𝙜𝙣𝙮𝙖 𝙅𝙪𝙜𝙖 𝙆𝙚𝙣𝙖 𝙂𝙝𝙤𝙨𝙩𝙞𝙣𝙜 🤣`")
 
 
-@ayiin_cmd(pattern="give(?: |$)(.*)")
+@icalp_cmd(pattern="give(?: |$)(.*)")
 async def _(giveaway):
     ayiin = await edit_or_reply(giveaway, "`𝙎𝙮𝙖𝙧𝙖𝙩 𝙄𝙠𝙪𝙩 𝙂𝙞𝙥𝙚𝙚𝙬𝙚𝙮`")
     sleep(2)
@@ -22,7 +22,7 @@ async def _(giveaway):
     await ayiin.edit("`𝙉𝙖𝙞𝙠 𝙊𝙨, 𝘿𝙖𝙣 𝙎𝙨 𝘽𝙪𝙠𝙩𝙞 𝙂𝙘𝙖𝙨𝙩`")
 
 
-@ayiin_cmd(pattern="uno(?: |$)(.*)")
+@icalp_cmd(pattern="uno(?: |$)(.*)")
 async def _(uno):
     xd = await edit_or_reply(uno, "`𝙆𝙖𝙠𝙠𝙠 👉👈`")
     sleep(2)
