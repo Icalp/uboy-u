@@ -45,7 +45,7 @@ async def chat_bot_toggle(event):
         await edit_or_reply(event, "**Usage:** `.chatbot` <on/off>")
 
 
-@ayiin_cmd(pattern="chatbot(?: |$)(.*)")
+@icalp_cmd(pattern="chatbot(?: |$)(.*)")
 async def on_apa_off(event):
     await chat_bot_toggle(event)
 
