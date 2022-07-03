@@ -21,7 +21,7 @@ from AyiinXd.ayiin import ayiin_cmd, runcmd
 from Stringyins import get_string
 
 
-@ayiin_cmd(pattern="convert ?(foto|audio|gif|voice|photo|mp3)? ?(.*)")
+@icalp_cmd(pattern="convert ?(foto|audio|gif|voice|photo|mp3)? ?(.*)")
 async def cevir(event):
     botyins = event.pattern_match.group(1)
     try:
@@ -120,7 +120,7 @@ async def cevir(event):
         return
 
 
-@ayiin_cmd(pattern="makevoice$")
+@icalp_cmd(pattern="makevoice$")
 async def makevoice(event):
     if not event.reply_to:
         return await eod(event, get_string("cvt_13"))
