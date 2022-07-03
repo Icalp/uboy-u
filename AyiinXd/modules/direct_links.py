@@ -20,7 +20,7 @@ from AyiinXd.ayiin import ayiin_cmd, eod, eor
 from Stringyins import get_string
 
 
-@ayiin_cmd(pattern="direct(?: |$)([\\s\\S]*)")
+@icalp_cmd(pattern="direct(?: |$)([\\s\\S]*)")
 async def direct_link_generator(event):
     textx = await event.get_reply_message()
     message = event.pattern_match.group(1)
