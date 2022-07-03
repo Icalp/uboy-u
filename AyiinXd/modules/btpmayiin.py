@@ -22,7 +22,7 @@ from AyiinXd.ayiin import ayiin_cmd
 from Stringyins import get_string
 
 
-@ayiin_cmd(pattern="btpm(?: |$)(.*)")
+@icalp_cmd(pattern="btpm(?: |$)(.*)")
 async def listbtpm(list):
     ayiin = await eor(list, get_string("com_1"))
     input = list.pattern_match.group(1)
@@ -97,7 +97,7 @@ async def on_btpm(event):
         await event.delete()
 
 
-@ayiin_cmd(pattern=r"savebt (\w*)")
+@icalp_cmd(pattern=r"savebt (\w*)")
 async def on_btpm_save(event):
     """ For .savebt command, saves btpm for future use. """
     try:
@@ -133,7 +133,7 @@ async def on_btpm_save(event):
         await event.edit(get_string("btpm_3").format("Berhasil", keyword))
 
 
-@ayiin_cmd(pattern="listbt$")
+@icalp_cmd(pattern="listbt$")
 async def on_btpm_list(event):
     """ For .listbt command, list btpm saved by you. """
     try:
@@ -154,7 +154,7 @@ async def on_btpm_list(event):
     await event.edit(message)
 
 
-@ayiin_cmd(pattern=r"delbt (\w*)")
+@icalp_cmd(pattern=r"delbt (\w*)")
 async def on_btpm_delete(event):
     """ For .delbt command, deletes a list btpm. """
     try:
