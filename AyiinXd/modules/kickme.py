@@ -14,7 +14,7 @@ from AyiinXd.ayiin import ayiin_cmd, eor
 from Stringyins import get_string
 
 
-@ayiin_cmd(pattern="kickme$", allow_sudo=False)
+@icalp_cmd(pattern="kickme$", allow_sudo=False)
 async def kickme(event):
     if event.chat_id in BLACKLIST_CHAT:
         return await eor(
@@ -24,7 +24,7 @@ async def kickme(event):
     await event.client.kick_participant(event.chat_id, "me")
 
 
-@ayiin_cmd(pattern="kikme$", allow_sudo=False)
+@icalp_cmd(pattern="kikme$", allow_sudo=False)
 async def kikme(event):
     if event.chat_id in BLACKLIST_CHAT:
         return await eor(
@@ -34,7 +34,7 @@ async def kikme(event):
     await event.client.kick_participant(event.chat_id, "me")
 
 
-@ayiin_cmd(pattern="leaveall$", allow_sudo=False)
+@icalp_cmd(pattern="leaveall$", allow_sudo=False)
 async def kickmeall(event):
     Yins = await eor(event, get_string("kikme_3"))
     er = 0
