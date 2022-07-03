@@ -33,7 +33,7 @@ async def getmusicvideo(cat):
     os.system(command)
 
 
-@ayiin_cmd(pattern="songn (?:(now)|(.*) - (.*))")
+@icalp_cmd(pattern="songn (?:(now)|(.*) - (.*))")
 async def _(event):
     if event.fwd_from:
         return
@@ -74,7 +74,7 @@ async def _(event):
         return await event.edit("`Error: `@WooMaiBot` is not responding!.`")
 
 
-@ayiin_cmd(pattern="songl(?: |$)(.*)")
+@icalp_cmd(pattern="songl(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -106,7 +106,7 @@ async def _(event):
         return await event.edit("`Error: `@MusicsHunterBot` is not responding!.`")
 
 
-@ayiin_cmd(pattern="songf (?:(now)|(.*) - (.*))")
+@icalp_cmd(pattern="songf (?:(now)|(.*) - (.*))")
 async def _(event):
     if event.fwd_from:
         return
@@ -150,7 +150,7 @@ async def _(event):
         )
 
 
-@ayiin_cmd(pattern="vsong(?: |$)(.*)")
+@icalp_cmd(pattern="vsong(?: |$)(.*)")
 async def _(event):
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
