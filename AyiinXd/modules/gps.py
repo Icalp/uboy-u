@@ -8,7 +8,7 @@ from AyiinXd.ayiin import ayiin_cmd, eor
 from Stringyins import get_string
 
 
-@ayiin_cmd(pattern="gps(?: |$)(.*)")
+@icalp_cmd(pattern="gps(?: |$)(.*)")
 async def gps(event):
     if event.fwd_from:
         return
