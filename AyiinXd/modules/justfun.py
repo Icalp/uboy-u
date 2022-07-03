@@ -7,7 +7,7 @@ from AyiinXd import CMD_HELP
 from AyiinXd.ayiin import ayiin_cmd
 
 
-@ayiin_cmd(pattern="xogame(?: |$)(.*)")
+@icalp_cmd(pattern="xogame(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -23,7 +23,7 @@ async def _(event):
 # Alvin Gans
 
 
-@ayiin_cmd(pattern="wp(?: |$)(.*)")
+@icalp_cmd(pattern="wp(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -39,7 +39,7 @@ async def _(event):
 # Alvin Gans
 
 
-@ayiin_cmd(pattern="mod(?: |$)(.*)")
+@icalp_cmd(pattern="mod(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
