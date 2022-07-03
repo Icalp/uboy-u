@@ -18,7 +18,7 @@ from AyiinXd.ayiin import ayiin_cmd, eod, extract_time
 from Stringyins import get_string
 
 
-@ayiin_cmd(
+@icalp_cmd(
     pattern="f(typing|audio|contact|document|game|location|photo|round|sticker|video) ?(.*)"
 )
 async def _(e):
