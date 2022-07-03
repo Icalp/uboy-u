@@ -38,7 +38,7 @@ async def handler(tele):
                         return
 
 
-@ayiin_cmd(pattern="gband(?: |$)(.*)")
+@icalp_cmd(pattern="gband(?: |$)(.*)")
 @register(pattern=r"^\.cgband(?: |$)(.*)", sudo=True)
 async def gben(userbot):
     dc = userbot
@@ -98,7 +98,7 @@ async def gben(userbot):
     )
 
 
-@ayiin_cmd(pattern=r"ungband(?: |$)(.*)")
+@icalp_cmd(pattern=r"ungband(?: |$)(.*)")
 @register(pattern=r"^\.cungband(?: |$)(.*)", sudo=True)
 async def gunben(userbot):
     dc = userbot
