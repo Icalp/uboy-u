@@ -16,7 +16,7 @@ from AyiinXd.ayiin import ayiin_cmd, edit_delete, reply_id
 BTN_URL_REGEX = re.compile(r"(\[([^\[]+?)\]\<buttonurl:(?:/{0,2})(.+?)(:same)?\>)")
 
 
-@ayiin_cmd(pattern="cbutton(?:\\s|$)([\\s\\S]*)")
+@icalp_cmd(pattern="cbutton(?:\\s|$)([\\s\\S]*)")
 async def _(event):
     reply_message = await event.get_reply_message()
     if reply_message:
@@ -67,7 +67,7 @@ async def _(event):
         os.remove(tgbot_reply_message)
 
 
-@ayiin_cmd(pattern="ibutton(?:\\s|$)([\\s\\S]*)")
+@icalp_cmd(pattern="ibutton(?:\\s|$)([\\s\\S]*)")
 async def _(event):
     reply_to_id = await reply_id(event)
     reply_message = await event.get_reply_message()
