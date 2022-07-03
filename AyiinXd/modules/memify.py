@@ -14,7 +14,7 @@ from AyiinXd import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY
 from AyiinXd.ayiin import edit_delete, edit_or_reply, ayiin_cmd, runcmd, take_screen_shot
 
 
-@ayiin_cmd(pattern="mmf (.*)")
+@icalp_cmd(pattern="mmf (.*)")
 async def memify(event):
     reply_msg = await event.get_reply_message()
     input_str = event.pattern_match.group(1)
