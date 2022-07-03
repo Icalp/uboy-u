@@ -11,7 +11,7 @@ from AyiinXd.ayiin import ayiin_cmd, eod, eor
 from Stringyins import get_string
 
 
-@ayiin_cmd(pattern="logo(?: |$)(.*)")
+@icalp_cmd(pattern="logo(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
