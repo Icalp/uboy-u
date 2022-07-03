@@ -19,7 +19,7 @@ fban_replies = [
 unfban_replies = ["New un-FedBan", "I'll give", "Un-FedBan"]
 
 
-@ayiin_cmd(pattern="(d)?fban(?: |$)(.*)")
+@icalp_cmd(pattern="(d)?fban(?: |$)(.*)")
 async def fban(event):
     """Bans a user from connected federations."""
     try:
@@ -90,7 +90,7 @@ async def fban(event):
                      )
 
 
-@ayiin_cmd(pattern="unfban(?: |$)(.*)")
+@icalp_cmd(pattern="unfban(?: |$)(.*)")
 async def unfban(event):
     """Unbans a user from connected federations."""
     try:
@@ -155,7 +155,7 @@ async def unfban(event):
                      )
 
 
-@ayiin_cmd(pattern="addf(?: |$)(.*)")
+@icalp_cmd(pattern="addf(?: |$)(.*)")
 async def addf(event):
     """Adds current chat to connected federations."""
     try:
@@ -175,7 +175,7 @@ async def addf(event):
     await event.edit(get_string("afbn_3"))
 
 
-@ayiin_cmd(pattern="delf$")
+@icalp_cmd(pattern="delf$")
 async def delf(event):
     """Removes current chat from connected federations."""
     try:
@@ -187,7 +187,7 @@ async def delf(event):
     await event.edit(get_string("dfbn_1"))
 
 
-@ayiin_cmd(pattern="listf$")
+@icalp_cmd(pattern="listf$")
 async def listf(event):
     """List all connected federations."""
     try:
@@ -207,7 +207,7 @@ async def listf(event):
     await event.edit(msg)
 
 
-@ayiin_cmd(pattern="clearf$")
+@icalp_cmd(pattern="clearf$")
 async def clearf(event):
     """Removes all chats from connected federations."""
     try:
