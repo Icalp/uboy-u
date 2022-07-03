@@ -10,7 +10,7 @@ from AyiinXd.ayiin import get_user_from_event, ayiin_cmd
 from Stringyins import get_string
 
 
-@ayiin_cmd(pattern="gkick(?: |$)(.*)")
+@icalp_cmd(pattern="gkick(?: |$)(.*)")
 @register(pattern=r"^\.cgkick(?: |$)(.*)", sudo=True)
 async def gspide(rk):
     lazy = rk
