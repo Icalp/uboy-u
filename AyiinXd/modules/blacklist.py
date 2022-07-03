@@ -16,7 +16,7 @@ from AyiinXd.ayiin import ayiin_cmd, ayiin_handler, eor
 from Stringyins import get_string
 
 
-@ayiin_handler(incoming=True)
+@icalp_handler(incoming=True)
 async def on_new_message(event):
     # TODO: exempt admins from locks
     name = event.raw_text
@@ -35,7 +35,7 @@ async def on_new_message(event):
             break
 
 
-@ayiin_cmd(pattern="addbl(?: |$)(.*)")
+@icalp_cmd(pattern="addbl(?: |$)(.*)")
 async def on_add_black_list(addbl):
     text = addbl.pattern_match.group(1)
     to_blacklist = list(
@@ -48,7 +48,7 @@ async def on_add_black_list(addbl):
     )
 
 
-@ayiin_cmd(pattern="listbl(?: |$)(.*)")
+@icalp_cmd(pattern="listbl(?: |$)(.*)")
 async def on_view_blacklist(listbl):
     all_blacklisted = sql.get_chat_blacklist(listbl.chat_id)
     OUT_STR = get_string("blk_5")
@@ -73,7 +73,7 @@ async def on_view_blacklist(listbl):
         await eor(listbl, OUT_STR)
 
 
-@ayiin_cmd(pattern="rmbl(?: |$)(.*)")
+@icalp_cmd(pattern="rmbl(?: |$)(.*)")
 async def on_delete_blacklist(rmbl):
     text = rmbl.pattern_match.group(1)
     to_unblacklist = list(
