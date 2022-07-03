@@ -14,7 +14,7 @@ from AyiinXd.ayiin import ayiin_cmd, eor
 from Stringyins import get_string
 
 
-@ayiin_cmd(pattern="lock ?(.*)")
+@icalp_cmd(pattern="lock ?(.*)")
 @register(pattern=r"^\.mlock ?(.*)", sudo=True)
 async def locks(event):
     input_str = event.pattern_match.group(1).lower()
@@ -106,7 +106,7 @@ async def locks(event):
         return
 
 
-@ayiin_cmd(pattern="unlock ?(.*)")
+@icalp_cmd(pattern="unlock ?(.*)")
 @register(pattern=r"^\.munlock ?(.*)", sudo=True)
 async def rem_locks(event):
     input_str = event.pattern_match.group(1).lower()
