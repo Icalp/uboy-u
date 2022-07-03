@@ -123,7 +123,7 @@ async def log_tagged_messages(event):
         )
 
 
-@ayiin_cmd(pattern="save(?: |$)(.*)")
+@icalp_cmd(pattern="save(?: |$)(.*)")
 async def log(log_text):
     if BOTLOG_CHATID:
         if log_text.reply_to_msg_id:
@@ -145,7 +145,7 @@ async def log(log_text):
         )
 
 
-@ayiin_cmd(pattern="log$")
+@icalp_cmd(pattern="log$")
 async def set_no_log_p_m(event):
     if BOTLOG_CHATID != -100:
         chat = await event.get_chat()
@@ -156,7 +156,7 @@ async def set_no_log_p_m(event):
             )
 
 
-@ayiin_cmd(pattern="nolog$")
+@icalp_cmd(pattern="nolog$")
 async def set_no_log_p_m(event):
     if BOTLOG_CHATID != -100:
         chat = await event.get_chat()
@@ -167,7 +167,7 @@ async def set_no_log_p_m(event):
             )
 
 
-@ayiin_cmd(pattern="pmlog (on|off)$")
+@icalp_cmd(pattern="pmlog (on|off)$")
 async def set_pmlog(event):
     if BOTLOG_CHATID == -100:
         return await edit_delete(
@@ -197,7 +197,7 @@ async def set_pmlog(event):
         await edit_or_reply(event, "**PM LOG Sudah Dimatikan**")
 
 
-@ayiin_cmd(pattern="gruplog (on|off)$")
+@icalp_cmd(pattern="gruplog (on|off)$")
 async def set_gruplog(event):
     if BOTLOG_CHATID == -100:
         return await edit_delete(
